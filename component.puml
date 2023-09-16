@@ -1,0 +1,14 @@
+@startuml
+component "Web Browser" as browser
+component "Web Server" as server
+component "Database" as db
+
+interface "HTTP" as http
+interface "SQL" as sql
+
+browser - http : request
+server - http : response
+server - sql : query
+db - sql : result
+
+@enduml
